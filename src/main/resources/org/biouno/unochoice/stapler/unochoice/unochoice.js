@@ -653,7 +653,7 @@ var UnoChoice = UnoChoice || (function($) {
             }
             var tagName = filteredElement.tagName;
             if (tagName == 'SELECT') { // handle SELECT's
-               jQuery(filteredElement).children().remove();
+               jQuery(filteredElement).children().detach().remove();
                for (var i = 0; i < newOptions.length ; ++i) {
                    var opt = document.createElement('option');
                    opt.value = newOptions[i].value;
